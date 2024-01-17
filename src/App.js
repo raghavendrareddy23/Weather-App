@@ -3,7 +3,7 @@ import "./App.css";
 import ForeCastBox from "./components/ForeCastBox";
 import GraphBox from "./components/GraphBox";
 import InputBox from "./components/InputBox";
-import { getFormattedWeatherData } from "./services/weatherService";
+import { getFormattedWeatherData } from "./pages/weatherService";
 
 function App() {
   const [query, setQuery] = useState({ q: "" });

@@ -1,5 +1,5 @@
 import React from "react";
-import { formatToLocalTime } from "../services/weatherService";
+import { formatToLocalTime } from "../pages/weatherService";
 
 function SunTime({ weatherData: { timezone }, dailyDetails }) {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { iconUrlFromCode } from "../services/weatherService";
+import { iconUrlFromCode } from "../pages/weatherService";
 import LineChart from "./LineChart";
 import Pressure from "./Pressure";
 import SunTime from "./SunTime";

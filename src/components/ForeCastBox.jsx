@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { iconUrlFromCode } from "../services/weatherService";
+import { iconUrlFromCode } from "../pages/weatherService";
 
 function ForeCastBox({
   weatherData: { daily },
