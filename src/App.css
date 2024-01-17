@@ -1,0 +1,13 @@
+#graphbox, #input, #debounce{
+  box-shadow: 2px 2px 15px 12px #f4f4f4;
+}
+
+#box-active{
+  background-color: #fffdf7;
+  border: 2px solid #02a6fa;
+}
+
+#box-inactive{
+  background-color: none;
+  border: none;
+}
