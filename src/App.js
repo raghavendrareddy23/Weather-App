@@ -64,10 +64,11 @@ function App() {
 
   useEffect(() => {
     fetchWeather();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   return (
-    <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500">
+    <div>
       {weatherData ? (
         <div className="flex flex-col justify-center items-center">
           <InputBox setQuery={setQuery} weatherData={weatherData} />
