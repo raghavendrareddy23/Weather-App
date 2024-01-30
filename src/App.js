@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import ForeCastBox from "./components/ForeCastBox";
 import GraphBox from "./components/GraphBox";
-import InputBox from "./components/InputBox";
 import { getFormattedWeatherData } from "./pages/weatherService";
+import InputBox from "./components/inputBox";
+import BackgroundLayout from "./components/BackgroundLayout";
 
 function App() {
   const [query, setQuery] = useState({ q: "" });
@@ -36,6 +37,7 @@ function App() {
       });
     }
   };
+  
 
   const fetchWeather = async () => {
     const message = query.q ? query.q : "current location.";
@@ -64,11 +66,11 @@ function App() {
 
   useEffect(() => {
     fetchWeather();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   return (
     <div>
+      <BackgroundLayout weatherData={weatherData} />
       {weatherData ? (
         <div className="flex flex-col justify-center items-center">
           <InputBox setQuery={setQuery} weatherData={weatherData} />

@@ -51,15 +51,17 @@ const formatForecastWeather = (data) => {
     return {
       title: formatToLocalTime(d.dt, timezone, "ccc"),
       temp: d.temp.day,
-      mode: d.weather[0].description,
+      mode: d.weather[0].main,
       icon: d.weather[0].icon,
       sunrise: d.sunrise,
       sunset: d.sunset,
       humidity: d.humidity,
       pressure: d.pressure,
+      wind: d.wind,
     };
   });
 
+  
   hourly = hourly.map((d) => {
     return {
       title: formatToLocalTime(d.dt, timezone, "hh:mm a"),

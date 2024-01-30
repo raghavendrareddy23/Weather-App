@@ -75,4 +75,3 @@ function CitiesList({ input, setInput, setDivToggle }) {
 }
 
 export default CitiesList;
-
